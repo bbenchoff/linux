@@ -183,9 +183,14 @@
 				function = "mmc0";
 			};
 
-			spi1_pins_a: spi1-pins-pc {
-				pins = "PA2", "PA0", "PA3", "PA1";
-				function = "pwm1";
+			spi1_pins_a: spi1-pins-native {
+				pins = "PA0", "PA1", "PA2", "PA3";
+				function = "spi1";
+			};
+
+			spi1_pins_a_gpio: spi1-pins-gpio {
+				pins = "PE7";
+				function = "gpio_out";
 			};
 
 			pwm1_pins: pwm1 {
