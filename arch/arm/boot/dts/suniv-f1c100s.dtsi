@@ -91,6 +91,14 @@
 			#size-cells = <0>;
 		};
 
+		pwm: pwm@1c21000 {
+			compatible = "allwinner,sun7i-a20-pwm";
+			reg = <0x01c21000 0xC>;
+			clocks = <&osc24M>;
+			#pwm-cells = <3>;
+			status = "disabled";
+		};
+
 		mmc0: mmc@1c0f000 {
 			compatible = "allwinner,suniv-f1c100s-mmc",
 				     "allwinner,sun7i-a20-mmc";
@@ -173,6 +181,16 @@
 			mmc0_pins: mmc0-pins {
 				pins = "PF0", "PF1", "PF2", "PF3", "PF4", "PF5";
 				function = "mmc0";
+			};
+
+			spi1_pins_a: spi1-pins-pc {
+				pins = "PA2", "PA0", "PA3", "PA1";
+				function = "pwm1";
+			};
+
+			pwm1_pins: pwm1 {
+				pins = "PE6";
+				function = "pwm1";
 			};
 		};
 
