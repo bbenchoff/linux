@@ -81,7 +81,7 @@
 		dc-gpios = <&pio 4 3 GPIO_ACTIVE_HIGH>; //PE3
 		//led-gpios = <&pio 4 6 GPIO_ACTIVE_HIGH>; //PE6
 
-		rotation = <90>;
+		rotation = <0>;
 	};
 };
 
