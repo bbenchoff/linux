@@ -122,7 +122,7 @@ out_enable:
 		addr_mode = ILI9341_MADCTL_MV;
 		break;
 	case 180:
-		addr_mode = ILI9341_MADCTL_MY;
+		addr_mode = ILI9341_MADCTL_MY | ILI9341_MADCTL_MX;
 		break;
 	case 270:
 		addr_mode = ILI9341_MADCTL_MV | ILI9341_MADCTL_MY |
