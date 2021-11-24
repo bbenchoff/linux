@@ -116,7 +116,7 @@ static void yx240qv29_enable(struct drm_simple_display_pipe *pipe,
 out_enable:
 	switch (dbidev->rotation) {
 	default:
-		addr_mode = ILI9341_MADCTL_MX | ILI9341_MADCTL_ML;
+		addr_mode = ILI9341_MADCTL_MX;
 		break;
 	case 90:
 		addr_mode = ILI9341_MADCTL_MV;
