@@ -45,6 +45,7 @@
 #define ILI9341_PUMPCTRL	0xf7
 
 #define ILI9341_MADCTL_BGR	BIT(3)
+#define ILI9341_MADCTL_ML	BIT(4)
 #define ILI9341_MADCTL_MV	BIT(5)
 #define ILI9341_MADCTL_MX	BIT(6)
 #define ILI9341_MADCTL_MY	BIT(7)
@@ -115,7 +116,7 @@ static void yx240qv29_enable(struct drm_simple_display_pipe *pipe,
 out_enable:
 	switch (dbidev->rotation) {
 	default:
-		addr_mode = ILI9341_MADCTL_MX;
+		addr_mode = ILI9341_MADCTL_MX | ILI9341_MADCTL_ML;
 		break;
 	case 90:
 		addr_mode = ILI9341_MADCTL_MV;
